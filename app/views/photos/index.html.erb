@@ -1,4 +1,12 @@
 <div class="page-header">
+
+  <% if current_user != nil %>
+      <h5>
+        Welcome back, <%= current_user.username%>
+      </h5>
+  <% end %>
+
+
   <h1>
     Photos
 
@@ -24,13 +32,14 @@
       <% @photos.each do |photo| %>
       <tr>
 
-        <td><%= photo.image %></td>
+        <td>
+          <img src="<%= photo.image %>" height="150px"/>
+        </td>
 
         <td><%= photo.caption %></td>
 
         <td>
-          <a href="/users/<%=photo.user_id%>">
-          <%=  photo.caption %>
+          <%=  photo.user_id %>
         </td>
 
         <td>
