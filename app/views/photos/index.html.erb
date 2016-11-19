@@ -12,9 +12,9 @@
     <table class="table table-striped table-hover">
       <tr>
 
-        <th>Caption</th>
-
         <th>Image</th>
+
+        <th>Caption</th>
 
         <th>User</th>
 
@@ -24,11 +24,14 @@
       <% @photos.each do |photo| %>
       <tr>
 
-        <td><%= photo.caption %></td>
-
         <td><%= photo.image %></td>
 
-        <td><%= photo.user_id %></td>
+        <td><%= photo.caption %></td>
+
+        <td>
+          <a href="/users/<%=photo.user_id%>">
+          <%=  photo.caption %>
+        </td>
 
         <td>
 
