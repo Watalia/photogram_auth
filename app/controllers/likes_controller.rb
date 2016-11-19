@@ -20,12 +20,9 @@ class LikesController < ApplicationController
   def create
     @like = Like.new
 
-
     @like.user_id = params[:user_id]
 
     @like.photo_id = params[:photo_id]
-
-
 
     save_status = @like.save
 
