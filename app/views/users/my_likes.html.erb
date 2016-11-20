@@ -11,7 +11,9 @@
 
           <% @user.liked_photos.each do |photo| %>
           <ul>
-          <li> <img src="<%= photo.image %>" height="150px"/></li>
+          <li> <img src="<%= photo.image %>" height="150px"/>
+              <dd>  <%=photo.caption%></dd>
+          </li>
           </ul>
           <% end %>
       </dd>
