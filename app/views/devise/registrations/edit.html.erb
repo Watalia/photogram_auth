@@ -4,7 +4,7 @@
   <%= devise_error_messages! %>
 
   <div class="form-group">
-    <%= f.label :email %><br />
+    <label for="Username"><%= f.label :email %> </label>
     <%= f.email_field :email, autofocus: true %>
   </div>
 
@@ -13,7 +13,7 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
     <%= f.password_field :password, autocomplete: "off" %>
     <% if @minimum_password_length %>
         <em><%= @minimum_password_length %> characters minimum</em>
