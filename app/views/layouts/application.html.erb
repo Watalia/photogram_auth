@@ -53,6 +53,8 @@
           <% if current_user != nil %>
           <li><a href="/users/<%=current_user.id%>"><%=current_user.username%></a></li>
 
+          <li><a href="/users"><i class="fa fa-fw fa-users"></i>All users</a></li>
+
           <li> <a href="/my_likes"> <i class="fa fa-fw fa-heart"></i><span class="hidden-sm">My Likes</span></a></li>
 
           <% else %>
