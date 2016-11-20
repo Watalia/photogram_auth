@@ -51,7 +51,7 @@
           <li><a href="/comments">Comments</a></li>
 
           <% if current_user != nil %>
-          <li><a href="/users/<%=current_user.id%>"><%=current_user.username%></a></li>
+          <li><a href="/users/<%=current_user.id%>"><i class="fa fa-fw fa-user"></i><%=current_user.username%></a></li>
 
           <li><a href="/users"><i class="fa fa-fw fa-users"></i>All users</a></li>
 

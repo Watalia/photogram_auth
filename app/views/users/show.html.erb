@@ -16,14 +16,12 @@
       <dd>
       <ul>
           <% Photo.where(:user_id=>@user.id).each do |photo|%> </a>
-          <li><img src="<%=photo.image%>" height="150px"    </li>
+          <li><img src="<%=photo.image%>" height="150px"
+                <dd>  <%=photo.caption%></dd>
+          </li>
           <% end %>
       </ul>
       </dd>
-
-
-
-
 
     </dl>
 
