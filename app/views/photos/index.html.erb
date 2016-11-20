@@ -28,8 +28,12 @@
                   <i class="fa fa-heart-o"></i>
                 </button>
               <small class="text-muted">be the first to like this</small>
+                <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+                <input type="hidden" name="user_id" value="<%=current_user%>">
+                <input type="hidden" name="photo_id" value="<%=photo.id%>">
               </form>
               <form action="/create_comment" method="post">
+                <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
                 <input type="hidden" name="photo_id" value="<%=photo.id%>">
                 <input type="text" name="body" placeholder="Add a comment..."class="form-control" required>
                 <input type="hidden" name="user_id" value="<%=photo.user_id%>">
