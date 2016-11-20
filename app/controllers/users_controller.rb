@@ -13,8 +13,8 @@ class UsersController < ApplicationController
     end
 
     def my_likes
-      @user = User.find(params[:id])
-      @like = Like.new
+      @user = current_user
+      
       render("users/my_likes.html.erb")
     end
 

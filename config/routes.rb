@@ -61,7 +61,7 @@ Rails.application.routes.draw do
   get "/users/:id", :controller => "users", :action => "show"
 
   # READ
-  get "/my_likes/:id", :controller => "users", :action => "my_likes"
+  get "/my_likes", :controller => "users", :action => "my_likes"
 
 
 

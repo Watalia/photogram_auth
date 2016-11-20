@@ -8,9 +8,12 @@
 
     <dt>My likes</dt>
       <dd>
-        <ul>
-          <li> <%=@user.liked_photos%></li>
+
+          <% @user.liked_photos.each do |photo| %>
+          <ul>
+          <li> <img src="<%= photo.image %>" height="150px"/></li>
           </ul>
+          <% end %>
       </dd>
 
 
